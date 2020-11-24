@@ -210,6 +210,9 @@ class ApiCache {
   // 拦截get
   interceptorGet (axios) {
     const get = axios.get
+    if (!get) {
+      return get
+    }
     const that = this
     function getFn (get, url, params, resolve, reject) {
       const urlKey = `${url}${JSON.stringify(params || '')}`
@@ -244,6 +247,9 @@ class ApiCache {
   // 拦截post
   interceptorPost (axios) {
     const post = axios.post
+    if (!post) {
+      return axios
+    }
     const that = this
     function postFn (post, url, params, resolve, reject) {
       const urlKey = `${url}${JSON.stringify(params || '')}`
