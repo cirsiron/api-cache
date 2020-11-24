@@ -173,7 +173,7 @@ class ApiCache {
         // 初始入口需要清空历史数据
         if (that.entryUrl === key) {
           that.map = {}
-          that.expires()
+          that.expireAll()
         }
         that.storageSet(key, {
           val,
@@ -198,7 +198,7 @@ class ApiCache {
     this.storageRemove(key)
   }
   // 清空全部数据
-  expires () {
+  expireAll () {
     this.storageRemove(this.cacheUrlList)
   }
   // TODO: 缓存超过限制处理机制
