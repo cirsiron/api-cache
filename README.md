@@ -73,6 +73,9 @@
   interceptorPost (axios) {
     // 缓存post
     const post = axios.post
+    if (!post) {
+      return
+    }
     const that = this
     function postFn (post, url, params, resolve, reject) {
       const urlKey = `${url}${JSON.stringify(params || '')}`
