@@ -1,0 +1,11 @@
+{
+  "name": "api-cache",
+  "version": "1.0.0",
+  "description": "接口缓存工具",
+  "main": "src/index.js",
+  "scripts": {
+  },
+  "keywords": ["接口", "接口缓存", "接口数据缓存", "api cache"],
+  "author": "huanghui",
+  "license": "ISC"
+}
